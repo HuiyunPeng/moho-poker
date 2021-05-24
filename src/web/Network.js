@@ -35,7 +35,7 @@ class Sender{
 	constructor(){
 		this.socket = null;
 		this.path = "";
-	    this.port = 9881;
+	    	this.port = 9881;
 	    
 		//this.address = "localhost";
 		this.address = "sockette.net";
@@ -175,7 +175,8 @@ function process(text){
 	else if(message.TYPE === 'ROOM_STATUS'){
 		join_success = 0;
 		users = message.users;
-		number_of_users = message.number_of_users;
+		//number_of_users = message.number_of_users;
+		number_of_users = users.length;
 	}
 	else if(message.TYPE === 'DATA'){
 		//Server sends back to all players of the played cards for them to update the UI
